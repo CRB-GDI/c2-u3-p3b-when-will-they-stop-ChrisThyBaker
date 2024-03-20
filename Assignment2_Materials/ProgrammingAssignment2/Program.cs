@@ -34,11 +34,22 @@ namespace ProgrammingAssignment2
 				// course add more space between the
 				// comments as needed
 
+				int numberCount = 0;
+				int Sum = 0;
+				int Numberinput = GetValue();
+				while (Numberinput != -1)
+				{
+					numberCount++;
+					Sum += Numberinput;
+				}
+                Console.Write(numberCount);
+                int mean = Sum / numberCount;
+                Console.Write(mean);
 
 
-				// Don't add or modify any code below
-				// this comment
-				input = Console.ReadLine();
+                // Don't add or modify any code below
+                // this comment
+                input = Console.ReadLine();
 			}
 		}
 
