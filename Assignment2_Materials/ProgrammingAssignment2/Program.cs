@@ -34,18 +34,34 @@ namespace ProgrammingAssignment2
 				// course add more space between the
 				// comments as needed
 
+				//declearing varbles
 				int numberCount = 0;
-				int Sum = 0;
-				int Numberinput = GetValue();
+				int sum = 0;
+				float mean = 0f; 
+
+				//getting frist input
+                int Numberinput = GetValue();
+
+				//while input is not -1, calulate the amount of values in the list and the sum of the values in the list
 				while (Numberinput != -1)
 				{
+					//gets the amount of values
 					numberCount++;
-					Sum += Numberinput;
-				}
-                Console.Write(numberCount);
-                int mean = Sum / numberCount;
-                Console.Write(mean);
 
+					//get the sum of the list
+					sum = sum + Numberinput;
+
+					//gets the next value in the list
+					Numberinput = GetValue();
+				}
+				// when the while loop ends, calulate the means of the list
+                if (numberCount > 0)
+				{
+					mean = (float)sum / numberCount;
+				}
+
+                // printing the amount of values in the list and the means of the values in the list
+                Console.WriteLine(numberCount + " " + mean);
 
                 // Don't add or modify any code below
                 // this comment
